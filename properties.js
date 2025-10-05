@@ -167,4 +167,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
     });
-    
+    // Preloader Script
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  const mainContent = document.getElementById("mainContent");
+
+  // Add a minimum loading time of 2 seconds for better UX
+  setTimeout(function () {
+    preloader.classList.add("fade-out");
+    mainContent.classList.add("show");
+
+    // Remove preloader from DOM after transition
+    setTimeout(function () {
+      preloader.style.display = "none";
+    }, 500);
+  }, 2000);
+});
+
+
