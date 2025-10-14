@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
   const preloader = document.getElementById("preloader");
   const mainContent = document.getElementById("mainContent");
 
-  // Add a minimum loading time of 2 seconds for better UX
+  // Faster loading time - 200ms
   setTimeout(function () {
     preloader.classList.add("fade-out");
     mainContent.classList.add("show");
@@ -11,10 +11,9 @@ window.addEventListener("load", function () {
     // Remove preloader from DOM after transition
     setTimeout(function () {
       preloader.style.display = "none";
-    }, 500);
-  }, 2000);
+    }, 300);
+  }, 200);
 });
-
 // Accordion behavior for collapse elements
 document.addEventListener("DOMContentLoaded", function () {
   // Get all collapse buttons
